@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ajay Kokcha | Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white selection:bg-white selection:text-black">
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-between items-center px-6 py-6 fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-zinc-900 shadow-lg">
+  
+      <h1 class="text-2xl font-bold">
+        Ajay
+      </h1>
+  
+      <ul class="hidden md:flex gap-6 text-gray-300">
+        <li><a href="#home" class="hover:text-white">Home</a></li>
+        <li><a href="#about" class="hover:text-white">About</a></li>
+        <li><a href="#skills" class="hover:text-white">Skills</a></li>
+        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+      </ul>
+      <a href="#contact" class="md:hidden bg-white text-black px-4 py-2 rounded-lg font-semibold text-sm">
+        Contact
+      </a>
+    </nav>
+  
+    <!-- HERO SECTION -->
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 relative overflow-hidden">
+
+      <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-black to-black"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto">
+        <p class="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-900/70 px-4 py-2 rounded-full text-sm text-gray-300 mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+          Available for new opportunities
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Hi, I'm
+          <span class="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
+            Ajay Kokcha
+          </span>
+        </h1>
+
+        <p class="text-gray-400 text-lg md:text-2xl mb-10 leading-8">
+          iOS Developer building clean, useful, and user-friendly digital experiences.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#projects" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition duration-300">
+            View Projects
+          </a>
+
+          <a href="#contact" class="border border-zinc-700 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-900 transition duration-300">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 bg-zinc-950">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          About Me
+        </h2>
+
+        <p class="text-gray-400 text-lg leading-8">
+          I am Ajay Kokcha, an iOS Developer passionate about building clean,
+          useful, and user-friendly digital experiences. I am currently building
+          my personal portfolio to showcase my skills, projects, and learning journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 px-6">
+      <div class="max-w-6xl mx-auto text-center">
+
+        <h2 class="text-4xl md:text-5xl font-bold mb-14">
+          Skills
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Skill Card -->
+          <div class="bg-zinc-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 border border-zinc-800">
+            <h3 class="text-2xl font-semibold mb-4">
+              HTML
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+              Building clean and structured webpages using semantic HTML.
+            </p>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="bg-zinc-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 border border-zinc-800">
+            <h3 class="text-2xl font-semibold mb-4">
+              CSS & Tailwind
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+              Creating responsive modern UI designs using Tailwind CSS.
+            </p>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="bg-zinc-900 p-8 rounded-2xl hover:-translate-y-2 transition duration-300 border border-zinc-800">
+            <h3 class="text-2xl font-semibold mb-4">
+              JavaScript
+            </h3>
+
+            <p class="text-gray-400 leading-7">
+              Adding interactivity and dynamic behavior to web applications.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-6 bg-zinc-950">
+      <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            Projects
+          </h2>
+
+          <p class="text-gray-400 text-lg">
+            A few projects I am building while learning and improving my skills.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Project Card -->
+          <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:-translate-y-2 transition duration-300">
+            <div class="h-40 bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 flex items-center justify-center text-2xl font-bold text-white">
+              Portfolio UI
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">
+                Portfolio Website
+              </h3>
+
+              <p class="text-gray-400 leading-7 mb-5">
+                A responsive personal portfolio website built using HTML and Tailwind CSS.
+              </p>
+
+              <a href="#" class="text-white font-semibold hover:underline">
+                View Project →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:-translate-y-2 transition duration-300">
+            <div class="h-40 bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 flex items-center justify-center text-2xl font-bold text-white">
+              iOS App
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">
+                iOS App Project
+              </h3>
+
+              <p class="text-gray-400 leading-7 mb-5">
+                An iOS app project focused on clean UI, smooth user experience, and practical features.
+              </p>
+
+              <a href="#" class="text-white font-semibold hover:underline">
+                View Project →
+              </a>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 hover:-translate-y-2 transition duration-300">
+            <div class="h-40 bg-gradient-to-br from-zinc-700 via-zinc-800 to-black flex items-center justify-center text-2xl font-bold text-white">
+              Coming Soon
+            </div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold mb-3">
+                Coming Soon
+              </h3>
+
+              <p class="text-gray-400 leading-7 mb-5">
+                More projects will be added here as I continue learning and building.
+              </p>
+
+              <a href="#" class="text-white font-semibold hover:underline">
+                View Project →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+</section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Contact Me
+        </h2>
+
+        <p class="text-gray-400 text-lg leading-8 mb-10">
+          I am open to learning opportunities, collaborations, and exciting projects.
+          Feel free to connect with me.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+          <a href="mailto:ajaykokcha@gmail.com" class="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition duration-300">
+            Email Me
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ajay-kokcha-7bb12386/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-zinc-700 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-900 transition duration-300"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://github.com/AjayKokcha"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border border-zinc-700 px-6 py-3 rounded-xl font-semibold hover:bg-zinc-900 transition duration-300"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 border-t border-zinc-900 text-center text-gray-500">
+      <p>
+        © 2026 Ajay Kokcha. All rights reserved.
+      </p>
+    </footer>
+  
+  </body>
+</html>
