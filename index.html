@@ -8,7 +8,7 @@
     content="Ajay Kokcha's personal portfolio for iOS development, skills, projects, and contact links."
   />
 
-  <title>Ajay Kokcha | Portfolio</title>
+  <title> Ajay Kokcha | Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,22 +31,53 @@
 
 <body class="bg-black text-white selection:bg-white selection:text-black">
   <!-- NAVBAR -->
-  <nav class="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-white/10 bg-black/75 px-6 py-5 shadow-2xl shadow-black/30 backdrop-blur-xl">
-    <a href="#home" class="text-[1.625rem] font-bold tracking-wide text-white md:text-[2rem]" style="font-family: Raleway, sans-serif;">
-      Ajay Kokcha
-    </a>
+  <nav class="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/75 px-6 py-5 shadow-2xl shadow-black/30 backdrop-blur-xl">
+    <div class="relative mx-auto flex w-full max-w-6xl items-center justify-between">
+      <a href="#home" class="text-[1.625rem] font-bold tracking-wide text-white md:text-[2rem]" style="font-family: Raleway, sans-serif;">
+        Ajay Portfolio
+      </a>
 
-    <ul class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 text-sm font-medium text-gray-300 md:flex">
-      <li><a href="#home" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Home</a></li>
-      <li><a href="#about" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">About</a></li>
-      <li><a href="#skills" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Skills</a></li>
-      <li><a href="#projects" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Projects</a></li>
-      <li><a href="#contact" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Contact</a></li>
-    </ul>
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 text-white transition hover:bg-white hover:text-black md:hidden"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <svg id="menu-open-icon" class="h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
 
-    <a href="#contact" class="rounded-full border border-white/20 bg-white px-4 py-2 text-sm font-semibold text-black shadow-lg shadow-white/10 md:hidden">
-      Contact
-    </a>
+        <svg id="menu-close-icon" class="hidden h-6 w-6" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <ul class="hidden items-center justify-center gap-8 text-sm font-medium text-gray-300 md:flex">
+        <li><a href="#about" class="transition hover:text-white">About</a></li>
+        <li><a href="#skills" class="transition hover:text-white">Skills</a></li>
+        <li><a href="#experience" class="transition hover:text-white">Experience</a></li>
+        <li><a href="#projects" class="transition hover:text-white">Projects</a></li>
+        <li><a href="#contact" class="transition hover:text-white">Contact</a></li>
+      </ul>
+
+      <div
+        id="mobile-menu"
+        class="absolute left-0 right-0 top-full mt-5 hidden rounded-2xl border border-white/10 bg-zinc-950/95 p-4 shadow-2xl shadow-black/40 md:hidden"
+      >
+        <ul class="flex flex-col gap-2 text-sm font-medium text-gray-300">
+          <li><a href="#about" class="block rounded-lg px-4 py-3 transition hover:bg-white hover:text-black">About</a></li>
+          <li><a href="#skills" class="block rounded-lg px-4 py-3 transition hover:bg-white hover:text-black">Skills</a></li>
+          <li><a href="#experience" class="block rounded-lg px-4 py-3 transition hover:bg-white hover:text-black">Experience</a></li>
+          <li><a href="#projects" class="block rounded-lg px-4 py-3 transition hover:bg-white hover:text-black">Projects</a></li>
+          <li><a href="#contact" class="block rounded-lg px-4 py-3 transition hover:bg-white hover:text-black">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <main>
@@ -58,47 +89,110 @@
         <h1 class="mb-6 text-5xl font-bold leading-tight md:text-7xl">
           Hi, I'm
           <span class="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
-            Ajay
+            Ajay Kokcha
           </span>
         </h1>
 
-        <p class="mb-10 text-lg leading-8 text-gray-400 md:text-2xl">
-          iOS Developer building clean, useful, and user-friendly digital experiences.
+        <p class="mb-4 text-xl font-semibold text-white md:text-3xl">
+          Lead iOS Engineer
         </p>
 
-        <div class="flex flex-col justify-center gap-4 sm:flex-row">
-          <a href="#projects" class="rounded-xl bg-white px-6 py-3 font-semibold text-black transition duration-300 hover:scale-105">
+        <p class="mx-auto mb-10 max-w-3xl text-lg leading-8 text-gray-400 md:text-2xl">
+          Building scalable iOS applications, exploring AI-powered products, and continuously experimenting with modern technologies and developer tools.
+        </p>
+
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a href="#projects" class="w-fit rounded-xl bg-white px-6 py-3 font-semibold text-black transition duration-300 hover:scale-105">
             View Projects
           </a>
 
-          <a href="#contact" class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold transition duration-300 hover:bg-zinc-900">
+          <a href="#contact" class="w-fit rounded-xl border border-zinc-700 px-6 py-3 font-semibold transition duration-300 hover:bg-zinc-900">
             Contact Me
           </a>
 
-          <a
-            href="./resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-xl border border-zinc-700 px-6 py-3 font-semibold transition duration-300 hover:bg-zinc-900"
-          >
-            Resume
-          </a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT SECTION -->
     <section id="about" class="bg-zinc-950 px-6 py-24">
-      <div class="mx-auto max-w-4xl text-center">
-        <h2 class="mb-6 text-4xl font-bold md:text-5xl">
-          About Me
-        </h2>
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-14 text-center">
+          <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+            About
+          </h2>
 
-        <p class="text-lg leading-8 text-gray-400">
-          I am Ajay Kokcha, an iOS Developer passionate about building clean,
-          useful, and user-friendly digital experiences. I am currently building
-          my personal portfolio to showcase my skills, projects, and learning journey.
-        </p>
+          <p class="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
+            A closer look at my experience, engineering mindset, and current learning focus.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-5">
+          <article class="rounded-2xl border border-zinc-800 bg-gradient-to-br from-zinc-900 via-zinc-900 to-black p-8 shadow-2xl shadow-black/20 lg:col-span-2">
+            <div class="mb-8 inline-flex items-end gap-3">
+              <span class="text-6xl font-bold leading-none text-white">9+</span>
+              <span class="pb-2 text-sm font-semibold uppercase tracking-widest text-zinc-500">Years</span>
+            </div>
+
+            <h3 class="mb-5 inline-flex items-center gap-3 text-2xl font-semibold text-white">
+              <span aria-hidden="true" class="text-3xl leading-none" style="font-family: -apple-system, BlinkMacSystemFont, sans-serif;"></span>
+              iOS Application Development
+            </h3>
+
+            <p class="leading-8 text-gray-400">
+              I’ve worked on consumer and enterprise applications across travel, fintech, fitness, logistics, lifestyle, ecommerce and media domains. I focus on building performant, reliable, and user-centric applications while continuously evolving with modern technologies, engineering practices, and product thinking.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Travel</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Fintech</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Fitness</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Logistics</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Lifestyle</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Ecommerce</span>
+              <span class="rounded-full border border-zinc-800 px-4 py-2 text-sm text-zinc-300">Media</span>
+            </div>
+          </article>
+
+          <div class="grid grid-cols-1 gap-8 lg:col-span-3">
+            <article class="rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2">
+              <div class="mb-5 flex items-center gap-4">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-zinc-800 bg-black text-white">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                    <path d="M12 8V12L15 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white">
+                  Engineering Philosophy
+                </h3>
+              </div>
+
+              <p class="leading-8 text-gray-400">
+                I enjoy solving complex technical challenges, improving application performance, and building maintainable systems that balance product quality with engineering efficiency. I actively leverage modern AI tools and developer workflows to improve productivity, accelerate development, and keep applications aligned with modern engineering standards and evolving technologies.
+              </p>
+            </article>
+
+            <article class="rounded-2xl border border-zinc-800 bg-zinc-900 p-8 transition duration-300 hover:-translate-y-2">
+              <div class="mb-5 flex items-center gap-4">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-zinc-800 bg-black text-white">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M13 3L4 14H11L10 21L20 9H13L13 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-white">
+                  Current Focus
+                </h3>
+              </div>
+
+              <p class="leading-8 text-gray-400">
+                Currently exploring AI, full-stack development, and modern developer tooling alongside iOS engineering. Interested in intelligent product experiences, automation workflows, and emerging technologies shaping the future of software development.
+              </p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -177,8 +271,74 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="bg-zinc-950 px-6 py-24">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-14 text-center">
+          <h2 class="mb-4 text-4xl font-bold md:text-5xl">
+            Experience
+          </h2>
+
+          <p class="mx-auto max-w-3xl text-lg leading-8 text-gray-400">
+            Practical engineering experience focused on building reliable iOS apps,
+            improving quality, and collaborating across product and development teams.
+          </p>
+        </div>
+
+        <div class="mx-auto max-w-4xl rounded-2xl border border-zinc-800 bg-zinc-900 p-8 text-left shadow-2xl shadow-black/20">
+          <div class="flex flex-col gap-4 border-b border-zinc-800 pb-6 md:flex-row md:items-start md:justify-between">
+            <div>
+              <h3 class="text-2xl font-semibold text-white">
+                iOS Developer
+              </h3>
+
+              <p class="mt-2 text-gray-400">
+                Native iOS development, app quality, and performance-focused delivery.
+              </p>
+            </div>
+
+            <span class="text-sm font-semibold uppercase tracking-wider text-zinc-500">
+              Current Focus
+            </span>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <div>
+              <h4 class="mb-2 font-semibold text-white">
+                App Development
+              </h4>
+
+              <p class="leading-7 text-gray-400">
+                Building clean Swift, SwiftUI, and UIKit interfaces with reusable app components.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="mb-2 font-semibold text-white">
+                Quality
+              </h4>
+
+              <p class="leading-7 text-gray-400">
+                Debugging, testing, code quality improvements, and reliable release practices.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="mb-2 font-semibold text-white">
+                Collaboration
+              </h4>
+
+              <p class="leading-7 text-gray-400">
+                Working with teams, product requirements, APIs, and practical delivery workflows.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="bg-zinc-950 px-6 py-24">
+    <section id="projects" class="px-6 py-24">
       <div class="mx-auto max-w-6xl">
         <div class="mb-14 text-center">
           <h2 class="mb-4 text-4xl font-bold md:text-5xl">
@@ -313,5 +473,28 @@
       &copy; 2026 Ajay Kokcha. All rights reserved.
     </p>
   </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-open-icon');
+    const menuCloseIcon = document.getElementById('menu-close-icon');
+
+    function setMobileMenuOpen(isOpen) {
+      mobileMenu.classList.toggle('hidden', !isOpen);
+      menuOpenIcon.classList.toggle('hidden', isOpen);
+      menuCloseIcon.classList.toggle('hidden', !isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenuOpen(false));
+    });
+  </script>
 </body>
 </html>
