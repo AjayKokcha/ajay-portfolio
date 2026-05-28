@@ -10,26 +10,41 @@
 
   <title>Ajay Kokcha | Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&display=swap" rel="stylesheet" />
+
   <!-- Tailwind CSS -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Raleway', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-black text-white selection:bg-white selection:text-black">
   <!-- NAVBAR -->
-  <nav class="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-zinc-900 bg-black/80 px-6 py-6 shadow-lg backdrop-blur-md">
-    <a href="#home" class="text-2xl font-bold">
-      Ajay
+  <nav class="fixed left-0 top-0 z-50 flex w-full items-center justify-between border-b border-white/10 bg-black/75 px-6 py-5 shadow-2xl shadow-black/30 backdrop-blur-xl">
+    <a href="#home" class="text-[1.625rem] font-bold tracking-wide text-white md:text-[2rem]" style="font-family: Raleway, sans-serif;">
+      Ajay Kokcha
     </a>
 
-    <ul class="hidden gap-6 text-gray-300 md:flex">
-      <li><a href="#home" class="hover:text-white">Home</a></li>
-      <li><a href="#about" class="hover:text-white">About</a></li>
-      <li><a href="#skills" class="hover:text-white">Skills</a></li>
-      <li><a href="#projects" class="hover:text-white">Projects</a></li>
-      <li><a href="#contact" class="hover:text-white">Contact</a></li>
+    <ul class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/5 p-1 text-sm font-medium text-gray-300 md:flex">
+      <li><a href="#home" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Home</a></li>
+      <li><a href="#about" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">About</a></li>
+      <li><a href="#skills" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Skills</a></li>
+      <li><a href="#projects" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Projects</a></li>
+      <li><a href="#contact" class="rounded-full px-4 py-2 transition hover:bg-white hover:text-black">Contact</a></li>
     </ul>
 
-    <a href="#contact" class="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-black md:hidden">
+    <a href="#contact" class="rounded-full border border-white/20 bg-white px-4 py-2 text-sm font-semibold text-black shadow-lg shadow-white/10 md:hidden">
       Contact
     </a>
   </nav>
@@ -40,11 +55,6 @@
       <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-black to-black"></div>
 
       <div class="relative z-10 mx-auto max-w-4xl">
-        <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-4 py-2 text-sm text-gray-300">
-          <span class="h-2 w-2 rounded-full bg-green-400"></span>
-          Available for new opportunities
-        </p>
-
         <h1 class="mb-6 text-5xl font-bold leading-tight md:text-7xl">
           Hi, I'm
           <span class="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
