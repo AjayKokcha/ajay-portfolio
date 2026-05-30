@@ -84,6 +84,43 @@
       text-shadow: 0 0 34px rgba(34, 211, 238, 0.24);
     }
 
+    .nav-resume-button {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 14px 40px rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-resume-button::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: -1;
+      border-radius: inherit;
+      background: linear-gradient(120deg, rgba(103, 232, 249, 0.65), rgba(167, 139, 250, 0.65), rgba(255, 255, 255, 0.65));
+      opacity: 0;
+      transition: opacity 260ms ease;
+    }
+
+    .nav-resume-button::after {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      z-index: -1;
+      border-radius: inherit;
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    .nav-resume-button:hover::before {
+      opacity: 1;
+    }
+
+    .nav-resume-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 36px rgba(34, 211, 238, 0.16), 0 18px 45px rgba(255, 255, 255, 0.1);
+    }
+
     .nav-link {
       position: relative;
       color: rgb(212 212 216);
@@ -222,9 +259,14 @@
           href="./resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="rounded-full border border-white/15 bg-white px-4 py-2 text-sm font-semibold text-black transition duration-300 hover:bg-zinc-200"
+          class="nav-resume-button inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold text-black transition duration-300"
         >
-          Resume
+          <span>Resume</span>
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M7 11L12 16L17 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M5 20H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
         </a>
       </div>
 
@@ -239,8 +281,13 @@
           <li><a href="#projects" class="block rounded-xl px-4 py-3 transition hover:bg-white hover:text-black">Projects</a></li>
           <li><a href="#contact" class="block rounded-xl px-4 py-3 transition hover:bg-white hover:text-black">Contact</a></li>
           <li>
-            <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" class="block rounded-xl bg-white px-4 py-3 font-semibold text-black transition hover:bg-zinc-200">
-              Resume
+            <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-button flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold text-black transition duration-300">
+              <span>Resume</span>
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 4V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M7 11L12 16L17 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 20H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
             </a>
           </li>
         </ul>
