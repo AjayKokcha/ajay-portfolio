@@ -28,6 +28,33 @@
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    .hero-name {
+      background: linear-gradient(90deg, #ffffff 0%, #dbeafe 28%, #67e8f9 55%, #a78bfa 78%, #ffffff 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 42px rgba(34, 211, 238, 0.18);
+      animation: heroGradientShift 7s ease-in-out infinite;
+    }
+
+    .hero-orb {
+      background: radial-gradient(circle, rgba(34, 211, 238, 0.22), transparent 65%);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(circle at center, black, transparent 70%);
+      -webkit-mask-image: radial-gradient(circle at center, black, transparent 70%);
+    }
+
+    @keyframes heroGradientShift {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+    }
     .product-card {
       isolation: isolate;
       background:
@@ -102,7 +129,7 @@
   <nav class="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/75 px-6 py-5 shadow-2xl shadow-black/30 backdrop-blur-xl">
     <div class="relative mx-auto flex w-full max-w-6xl items-center justify-between">
       <a href="#home" class="text-[1.625rem] font-bold tracking-wide text-white md:text-[2rem]" style="font-family: Raleway, sans-serif;">
-        Ajay Portfolio
+        Ajay Kokcha
       </a>
 
       <button
@@ -150,34 +177,41 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section id="home" class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-24 text-center">
-      <div class="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-black to-black"></div>
+    <section id="home" class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-28 text-center">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.14),_transparent_34%),linear-gradient(to_bottom,_rgba(24,24,27,0.9),_#000_58%)]"></div>
+      <div class="hero-grid absolute inset-0 opacity-70"></div>
+      <div class="hero-orb absolute -top-32 left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-1/2 h-px w-3/4 -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
 
-      <div class="relative z-10 mx-auto max-w-4xl">
-        <h1 class="mb-6 text-5xl font-bold leading-tight md:text-7xl">
+      <div class="relative z-10 mx-auto max-w-5xl">
+        <div class="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-zinc-300 shadow-2xl shadow-black/20 backdrop-blur-xl">
+          <span class="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.75)]"></span>
+          Lead iOS Engineer · AI Explorer · Product-minded Developer
+        </div>
+
+        <h1 class="mb-6 font-display text-5xl font-bold leading-tight tracking-tight md:text-7xl lg:text-8xl">
           Hi, I'm
-          <span class="bg-gradient-to-r from-white via-sky-200 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(34,211,238,0.22)]">
+          <span class="hero-name block md:inline">
             Ajay Kokcha
           </span>
         </h1>
 
-        <p class="mb-4 bg-gradient-to-r from-zinc-100 via-sky-200 to-cyan-300 bg-clip-text text-lg font-semibold text-transparent drop-shadow-[0_0_20px_rgba(125,211,252,0.16)] md:text-3xl">
-          Lead iOS Engineer
+        <p class="mx-auto mb-5 max-w-3xl text-xl font-semibold leading-8 text-zinc-100 md:text-3xl">
+          Building modern mobile experiences with a growing focus on AI-powered products and emerging technologies.
         </p>
 
-        <p class="mx-auto mb-10 max-w-3xl text-lg leading-8 text-gray-400 md:text-2xl">
-          Building scalable iOS applications, exploring AI-powered products, and continuously experimenting with modern technologies and developer tools.
+        <p class="mx-auto mb-10 max-w-3xl text-lg leading-8 text-gray-400 md:text-xl">
+          I craft production-grade iOS applications, explore full-stack engineering, and use modern AI tools to improve how products are designed, built, and delivered.
         </p>
 
         <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="#projects" class="w-fit rounded-xl bg-white px-6 py-3 font-semibold text-black transition duration-300 hover:scale-105">
-            View Projects
+          <a href="#projects" class="w-fit rounded-xl bg-white px-6 py-3 font-semibold text-black shadow-2xl shadow-white/10 transition duration-300 hover:scale-105 hover:bg-zinc-200">
+            Explore Portfolio
           </a>
 
-          <a href="#contact" class="w-fit rounded-xl border border-zinc-700 px-6 py-3 font-semibold transition duration-300 hover:bg-zinc-900">
-            Contact Me
+          <a href="#contact" class="w-fit rounded-xl border border-white/15 bg-white/[0.03] px-6 py-3 font-semibold text-white backdrop-blur-xl transition duration-300 hover:border-white/30 hover:bg-white/[0.08]">
+            Start a Conversation
           </a>
-
         </div>
       </div>
     </section>
